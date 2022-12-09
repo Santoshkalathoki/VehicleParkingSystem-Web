@@ -1,0 +1,15 @@
+<mat-nav-list>
+  <div class="logo">
+    <img src="../../../assets/parkingHouseLogo.png" alt="Parking Logo"/>
+  </div>
+  <mat-divider></mat-divider>
+  <h2 matSubheader class="mt-2">APPLICATIONS</h2>
+
+  <a mat-list-item
+     *ngFor="let m of sidebarMenus; let i= index;"
+     [routerLink]="m?.url || null"
+     [routerLinkActive]="m?.url ? 'list-item-active' : ''">
+    <mat-icon>{{m?.icon}}</mat-icon>
+    {{m?.name}}
+  </a>
+</mat-nav-list>
